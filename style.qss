@@ -1,0 +1,202 @@
+/* Style for the main window and default font settings */
+QWidget {
+    background-color: #1d2129;  /* Dark grey background */
+    color: #FFF;  /* White text for better contrast */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;  /* Apply bold font universally to all text */
+}
+
+/* General style for all labels */
+QLabel {
+    font-size: 20px;  /* Updated font size */
+    color: #ebebeb;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Enhanced style for the title label */
+QLabel#titleLabel {
+    font-size: 28px;  /* Larger font size for title */
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);  /* Soft white shadow for depth */
+}
+
+/* Style for buttons */
+QPushButton {
+    background-color: #555;  /* Darker grey for buttons */
+    border: 2px solid #777;  /* Grey border */
+    padding: 10px;
+    border-radius: 5px;  /* Rounded corners */
+    transition: background-color 0.3s, box-shadow 0.3s;  /* Smooth transition for hover effects */
+}
+
+QPushButton:hover {
+    background-color: #666;  /* Lighter grey on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow for depth */
+}
+
+QPushButton:pressed {
+    background-color: #444;  /* Darker grey when pressed */
+}
+
+/* Style for text inputs */
+QLineEdit, QTextEdit {
+    background-color: #ebebeb;  /* White background for readability */
+    color: #333;  /* Grey text */
+    border: 2px solid #777;  /* Consistent border styling */
+    border-radius: 4px;
+    padding: 5px;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border-color: #aaa;  /* Highlight focus with a lighter border */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);  /* Focus effect */
+}
+
+/* Style for layout containers */
+QVBoxLayout, QHBoxLayout, QGridLayout {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Style for the tab widget */
+QTabWidget {
+    background-color: #333;  /* Dark grey for consistency */
+}
+
+/* General style for all tabs */
+QTabBar::tab {
+    background-color: #555;
+    font-size:15px;
+    border: 2px solid #777;
+    padding: 16px;
+    padding-bottom: 10px;
+    margin-right: 55px;  /* Space between tabs */
+    border-top-left-radius: 5px;  /* Rounded corners */
+    border-top-right-radius: 5px;  /* Rounded corners */
+    transition: background-color 0.3s, margin-top 0.3s;
+
+     /* Set the size of the tabs */
+    min-width: 153px;   /* Minimum width of the tabs */
+    max-width: 180px;   /* Maximum width of the tabs */
+    min-height: 20px;   /* Minimum height of the tabs */
+    max-height: 60px;   /* Maximum height of the tabs */
+}
+
+QTabBar::tab:selected {
+    background-color: #007bff;  /* Highlight the selected tab */
+    color: white;
+    border-bottom: 2px solid #1d2129;  /* To match the tab content background */
+}
+
+QTabBar::tab:!selected {
+    background-color: #555;
+    margin-top: 10px;  /* Lower unselected tabs slightly for a 3D effect */
+}
+
+QTabBar::tab:!selected:hover {
+    background-color: #777;
+    margin-top: 5px;  /* Slightly raise hovered tab */
+}
+
+/* Pane background color */
+QTabWidget::pane {
+    background-color: #333;  /* Dark grey for consistency */
+    border: 1px solid #555;
+}
+
+/* Special style for the Buy Cryptocurrency tab */
+QTabBar::tab:selected {
+    background-color: black;  /* Highlight the Buy Cryptocurrency tab */
+    color: white;
+}
+
+/* Style for table view headers */
+QHeaderView::section {
+    background-color: #555;  /* Grey background for headers */
+    color: white;  /* White text for headers */
+    border: 1px solid #666;  /* Subtle border for headers */
+    padding: 4px;
+    font-size: 16px;  /* Larger font size for headers */
+    font-weight: bold;  /* Bold font for headers */
+}
+
+/* Enhanced QComboBox Styles */
+QComboBox {
+    background-color: #2d2d2d;
+    color: #FFF;
+    border: 2px solid #555;
+    border-radius: 5px;
+    padding: 5px;
+    min-height: 30px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: right;
+    width: 30px;
+    border-left: 1px solid #555;
+}
+
+QComboBox::down-arrow {
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff; /* Creating a white arrow */
+}
+
+QComboBox:hover {
+    border: 2px solid #888;
+}
+
+QComboBox::drop-down:hover {
+    background-color: #3d3d3d;
+}
+
+/* Style for list widget */
+QListWidget {
+    background-color: #1d2129;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+QListWidget::item {
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 15px;
+}
+
+
+QListWidget::item:selected {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+QListWidget::item:hover {
+    background-color: #666;
+    border-bottom-color: #007bff;
+}
+QGroupBox {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    margin-top: 10px;
+    font: bold 18px;
+    color: lightblue;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center; /* position at the top center */
+    padding: 0 3px;
+}
+QToolTip {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+}
+
